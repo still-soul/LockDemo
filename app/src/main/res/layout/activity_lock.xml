@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ztk.demo.lockdemo.view.SlidingFinishLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:nono="http://com.demo0.nono"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/lock_root"
+    android:background="#242424"
+    tools:context=".LockActivity">
+
+    <TextView
+        android:textColor="#ffffff"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="39dp"
+        android:layout_alignParentTop="true"
+        android:text="17:30"
+        android:textSize="38sp"
+        android:id="@+id/lock_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:textColor="#ffffff"
+        android:layout_marginTop="5dp"
+        android:layout_alignLeft="@+id/lock_time"
+        android:layout_below="@+id/lock_time"
+        android:text="12月21日 星期三"
+        android:includeFontPadding="false"
+        android:textSize="20sp"
+        android:id="@+id/lock_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <ImageView
+        android:id="@+id/iv_audio"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="200dp"
+        android:layout_centerHorizontal="true"
+        app:srcCompat="@color/colorPrimary"/>
+    <TextView
+        android:id="@+id/tv_audio_name"
+        android:layout_below="@+id/iv_audio"
+        android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="专辑名称"
+        android:textSize="20sp"
+        android:textColor="#ffffff"/>
+
+    <TextView
+        android:id="@+id/tv_audio"
+        android:layout_below="@+id/tv_audio_name"
+        android:layout_marginTop="6dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="演唱者"
+        android:textSize="16sp"
+        android:textColor="#ffffff"/>
+
+    <com.ztk.demo.lockdemo.view.HintTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:includeFontPadding="false"
+        android:text=">>> 滑动解锁"
+        android:textColor="#ffffff"
+        android:textSize="18sp"/>
+</com.ztk.demo.lockdemo.view.SlidingFinishLayout>
