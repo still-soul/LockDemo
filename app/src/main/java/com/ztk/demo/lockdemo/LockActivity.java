@@ -9,7 +9,6 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.TextView;
 
-import com.ztk.demo.lockdemo.utils.AndroidWorkaround;
 import com.ztk.demo.lockdemo.view.SlidingFinishLayout;
 
 import java.text.SimpleDateFormat;
@@ -29,10 +28,6 @@ public class LockActivity extends AppCompatActivity implements SlidingFinishLayo
         super.onCreate(savedInstanceState);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_DISMISS_KEYGUARD | WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED);
         fullScreen(this);
-        if (AndroidWorkaround.checkDeviceHasNavigationBar(this)) {
-            AndroidWorkaround.assistActivity(findViewById(android.R.id.content));
-        }
-
         setContentView(R.layout.activity_lock);
         initView();
     }
