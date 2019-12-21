@@ -7,9 +7,6 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.IBinder;
 
-import android.util.Log;
-
-
 import com.ztk.demo.lockdemo.LockActivity;
 
 import androidx.annotation.Nullable;
@@ -29,8 +26,6 @@ public class PlayService extends Service {
         screenBroadcastReceiver = new ScreenBroadcastReceiver();
         final IntentFilter filter = new IntentFilter();
         filter.addAction(Intent.ACTION_SCREEN_OFF);
-        Log.e("onCreate: ", "filter");
-        // Attach the broadcast listener
         registerReceiver(screenBroadcastReceiver, filter);
 
     }
@@ -46,11 +41,9 @@ public class PlayService extends Service {
 
     private void handleCommandIntent(Intent intent) {
         final String action = intent.getAction();
-        Log.e("action", action);
         if (Intent.ACTION_SCREEN_OFF.equals(action) ){
             Intent lockScreen = new Intent(this, LockActivity.class);
             lockScreen.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            Log.e("action", "start");
             startActivity(lockScreen);
         }
     }

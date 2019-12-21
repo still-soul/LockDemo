@@ -29,7 +29,6 @@ public class LockActivity extends AppCompatActivity implements SlidingFinishLayo
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_DISMISS_KEYGUARD | WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED);
         fullScreen(this);
         setContentView(R.layout.activity_lock);
-        Log.e( "onCreate: ", "test1");
         initView();
     }
     /**
